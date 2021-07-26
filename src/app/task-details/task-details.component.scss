@@ -1,0 +1,57 @@
+div{
+  background-color: lightyellow;
+  border-left: black dotted 25px;
+  position: fixed;
+  top: 10%;
+  width: 50%;
+  height: 80%;
+  left: 25%;
+  padding: 20px 20px 20px 50px;
+  overflow: auto;
+}
+#detailsHeader{
+  margin-top: 0px;
+  font-size: 72px;
+  text-align: center;
+  font-family: "Harlow Solid Italic";
+}
+h2{
+  font-size: 42px;
+}
+h3{
+  font-size: 32px;
+}
+p{
+  margin-top: -5px;
+  font-size: 24px;
+}
+button{
+  background-color: white;
+  color: #555555;
+  border: thick double #555555;
+  font-weight: bold;
+  border-radius: 5px;
+}
+button:hover{
+  background-color: #555555;
+  color: white;
+  border: thick double white;
+  font-weight: bold;
+}
+.backButton{
+  font-size: 52px;
+  float: right;
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: 25px;
+}
+.editButton{
+  font-size: 52px;
+  float: left;
+  padding: 10px;
+  margin-top: 50px;
+}
+input{
+  font-size: 40px;
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+
+<div>
+<input [(ngModel)]="title" placeholder="Title">
+<input [(ngModel)]="prio" placeholder="Priority">
+<input [(ngModel)]="details" placeholder="Details" class="detailsInput">
+</div>
+
+<div>
+<button id="addTaskButton" (click)="addTask(title, prio, details)">Add Task</button>
+</div>
+<br>
+<br>
+<ul *ngFor="let t of taskService.tasks">
+  <li>
+    <table width="100%" (click)="taskService.showTaskDetails = !taskService.showTaskDetails" (click)="selectedTask = t">
+      <tr>
+        <td width="20%"><h1>{{t.title}}</h1></td>
+        <td width="50%" rowspan="2" ><p id="details">{{t.details}}</p></td>
+        <td width="30%" rowspan="2" ><button class="done" (click)="done(t)">Done</button></td>
+      </tr>
+      <tr>
+        <td><p>Priority {{t.prio}}</p></td>
+      </tr>
+    </table>
+  </li>
+</ul>
+
+<ng-container *ngIf="taskService.tasksDone.length > 0"><h1 id="doneHeader" (click)="showDoneTasks = !showDoneTasks">
+  Done({{taskService.tasksDone.length}})
+</h1></ng-container>
+<ng-container *ngIf="showDoneTasks">
+<ul *ngFor="let t of taskService.tasksDone" >
+  <li>
+    <div>
+      <button class="delete" (click)="delete(t)">Delete</button>
+    </div>
+    <h1 class="deleteHeader">{{t.title}}</h1>
+  </li>
+</ul>
+</ng-container>
+
+<div *ngIf="taskService.showTaskDetails">
+  <app-task-details [selectedTask] = "selectedTask"></app-task-details>
+</div>

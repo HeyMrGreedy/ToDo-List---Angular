@@ -1,0 +1,18 @@
+<div>
+  <h1 id="detailsHeader">{{selectedTask.title}}</h1>
+  <h2>Priority: {{selectedTask.prio}}</h2>
+  <h3>ID: {{selectedTask.id}}</h3>
+  <br>
+  <p>
+      {{selectedTask.details}}
+  </p>
+    <button class="editButton" (click)="editMode = !editMode">Edit/Save</button>
+    <div *ngIf="editMode">
+        <input [(ngModel)]="text" placeholder="Details"/>
+        <button class="editButton" (click)="taskServiceDetails.updateTaskDetails(selectedTask, text); editMode = !editMode">
+          Edit/Save
+        </button>
+        <button class="backButton" (click)="editMode = !editMode">Back</button>
+    </div>
+  <button class="backButton" (click)="taskServiceDetails.showTaskDetails = !taskServiceDetails.showTaskDetails">Back</button>
+</div>

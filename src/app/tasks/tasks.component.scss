@@ -1,0 +1,79 @@
+button{
+  background-color: white;
+  color: #555555;
+  font-size: 40px;
+  padding: 20px;
+  border: thick double #555555;
+  font-weight: bold;
+  border-radius: 5px;
+}
+#addTaskButton{
+  margin: 30px;
+  width: 30%;
+}
+button:hover{
+  background-color: #555555;
+  color: white;
+  border: thick double white;
+  font-weight: bold;
+}
+input{
+  font-family: "Arial Black";
+  border: medium inset #555555;
+  font-size: 40px;
+  margin: 15px;
+}
+.detailsInput{
+  width:50%;
+}
+div {
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+  background-color: #3c99dc;
+  overflow: hidden;
+}
+#details{
+  overflow: auto;
+  height: 120px;
+}
+.done{
+  background-color: green;
+  border: thick solid white;
+  color: white;
+  float: right;
+  border-radius: 50px;
+  font-size: 50px;
+  margin: -10px;
+  margin-right: 20px;
+}
+.done:hover{
+  border: thick solid green;
+  background-color: white;
+  color: green;
+}
+.delete{
+  background-color: darkred;
+  border: thick solid white;
+  color: white;
+  float: right;
+  border-radius: 50px;
+  font-size: 25px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+.delete:hover{
+  background-color: white;
+  border: thick solid darkred;
+  color: darkred;
+}
+.deleteHeader{
+  text-decoration: line-through;
+}
+#doneHeader{
+  font-size: 50px;
+  margin-top: 75px;
+  text-decoration: underline darkred;
+  text-align: left;
+}
